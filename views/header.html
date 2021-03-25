@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../scss/reset.css" type="text/css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../scss/theme.css" type="text/css" rel="stylesheet">
+        <link href="../scss/style.css" type="text/css" rel="stylesheet">
+        <script src="../script.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="../app.js" type="text/javascript"></script>
+        <script src="../column.js" type="text/javascript"></script>
+        
+
+    </head>
+
+
+    <body>
+        <header>
+            <div class="flex1">
+            <div class="home_and_dash">
+                <i class="fa fa-home"></i>
+                <div>
+                    <h1>Dashboard</h1>
+                    <h2>Home > Dashboard</h2>
+                </div>
+            </div>
+            <div class="selecttag">
+                <select name="name" id="names">
+                    <option value="volvo">Arjun</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
+
+                  <select name="month" id="cars">
+                    <option value="volvo">Jan 2021</option>
+                    <option value="saab">Feb 2021</option>
+                    <option value="opel">Mar 2021</option>
+                    <option value="audi">Apr 2021</option>
+                  </select>
+            </div>
+            </div>
+
+            <div class="btn">
+                <select id="mySelect" onchange="toggle_visibility('togg')">
+                    <option value="Show">Show</option>
+                    <option value="Hide">Hide</option>
+                    
+                    
+                </select>
+            </div>
+
+            <script>
+                function toggle_visibility(id){
+                    var y=document.getElementById(id);
+                    var x=document.getElementById('mySelect').value;
+                    if(x=='Show')
+                        y.style.display='block';
+                    else
+                        y.style.display='none';
+                }
+            </script>
+        
+            <div id="togg">
+            <div class="grid1">
+            <!--First card-->
+            <div class="card">
+                <div class="row1">
+                    <h5>weekly sales</h5>
+                    <i class="fa fa-line-chart"></i>
+                </div>
+                <h3> $ 15,0000</h3>
+                <p>Increased by 60%</p>
+            </div>
+        
+
+            <!--second card-->
+            <div class="card card2">
+                <div class="row1">
+                    <h5>weekly Orders</h5>
+                    <i class="fa fa-bookmark-o"></i>
+                </div>
+                <h3>45,0000</h3>
+                <p>Increased by 60%</p>
+            </div>
+            <!--third card-->
+            <div class="card card2 card3">
+                <div class="row1">
+                    <h5>Visitors Online</h5>
+                    <i class="fa fa-diamond"></i>
+                </div>
+                <h3>95,5741</h3>
+                <p>Increased by 5%</p>
+            </div>
+
+            </div>
+            <!--white-->
+            <div class="grid2">
+            <div class="card card2 white">
+                <h5 style="color:black">Visit and Sales Statistics</h5>
+                <div id="columnchart_material"></div>
+
+            </div>
+
+            <div class="card card2 white">
+                
+                <div id="donutchart"></div>
+
+            </div>
+            </div>
+        </div>
+        
+        </header>
+    </body>
+</html>

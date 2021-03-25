@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "nexa-bold";
+  src: url("../fonts/Nexa-Bold.otf");
+}
+
+@font-face {
+  font-family: "nexa-light";
+  src: url("../fonts/Nexa-Light.otf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #373d43;
+  font-family: nexa-bold;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+select {
+  background: #f2edf3;
+}
+
+section {
+  background-color: #f2edf3;
+  padding: 0rem  1.5rem 0rem 1.5rem;
+}
+
+p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    background-color: #f2edf3;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+body {
+  background-color: #f2edf3;
+}
+
+.home_and_dash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home_and_dash i {
+  font-size: 2rem;
+  background-color: #c579ff;
+  color: #ffffff;
+  padding: 0.8rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.home_and_dash div h1 {
+  margin-bottom: 0.5rem;
+}
+
+.selecttag {
+  margin-top: 1rem;
+}
+
+.selecttag select {
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.selecttag #names {
+  margin-right: 0.2rem;
+}
+
+header {
+  padding: 2rem 1.5rem;
+}
+
+.btn {
+  text-align: center;
+}
+
+/*section*/
+.card {
+  background-color: #fe8d95;
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+}
+
+.card .row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card h5, .card i {
+  color: #ffffff;
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-top: 1.2rem;
+}
+
+.card2 {
+  margin-top: 2rem;
+  background-color: #3d9dea;
+}
+
+/*card 3*/
+.card3 {
+  background-color: #3fd2bf;
+}
+
+/*card 3 and card4 white*/
+.white {
+  background-color: #ffffff;
+}
+
+#columnchart_material {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 2rem 1.5rem;
+  }
+  .flex1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .grid1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .card {
+    border-radius: 0.5rem;
+  }
+  .grid2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .white h5 {
+    margin-left: 5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
