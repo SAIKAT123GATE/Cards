@@ -1,6 +1,18 @@
 @import "./theme.scss";
 body{
     background-color: $lightpink;
+    
+}
+.upnav{
+    background-color:$green;
+    padding: 2rem 0rem;
+}
+.sidenav{
+    height:110%;
+    width:3rem;
+    position: absolute;
+    background-color: red;
+    
 }
 .home_and_dash{
     display: flex;
@@ -33,11 +45,16 @@ body{
 }
 
 header{
-    padding: 2rem 1.5rem;
+    padding: 2rem 2rem;
 }
 
 .btn{
     text-align: center;
+    i{
+        font-size: 2rem;
+        border:1px solid black;
+        padding: 0rem 2rem;
+    }
 }
 
 /*section*/
@@ -81,9 +98,622 @@ header{
     padding-top:1rem ;
 }
 
+
+//For card ***************************************************8
+//*****************************************************************
+.header-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1rem;
+    grid-area: heading;
+    padding: 1rem;
+    h4 {
+        color: $dark-green;
+    }
+}
+.lead-section {
+    grid-area: lead;
+    margin: 0;
+    border-top: 0.125rem solid $border;
+    .search-section {
+        padding: 1rem;
+        border-bottom: 0.125rem solid $border;
+        .search-box {
+            display: flex;
+            border: 0.1rem solid $border;
+            i {
+                padding: 0.5rem;
+            }
+            input {
+                border: none;
+                width: 100%;
+            }
+        }
+    }
+    .scroll-section {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        #scroll-left {
+            padding-right: 0.5rem;
+            display: flex;
+            align-self: center;
+        }
+        #scroll-right {
+            padding-left: 0.5rem;
+            display: flex;
+            align-self: center;
+        }
+        #scroll-buttons {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            #static {
+                button {
+                    border-radius: 0;
+                }
+                .inactive-btn {
+                    background: $white;
+                    color: $dark-green;
+                }
+                .active-btn {
+                    border: 0.125rem solid $dark-green;
+                }
+            }
+            #dynamic {
+                display: flex;
+                flex-direction: row;
+                white-space: nowrap;
+                overflow-x: hidden;
+                button {
+                    border-radius: 0;
+                    border-left: none !important;
+                }
+                .inactive-btn {
+                    background: $white;
+                    color: $dark-green;
+                    border-left: 0;
+                    border: 0.125rem solid $dark-green;
+                }
+            }
+        }
+    }
+    .card-section {
+        padding: 1rem 1rem 0;
+        .inactive {
+            display: none;
+        }
+        .head {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            border-bottom: 0.1rem solid $border;
+            h4 {
+                color: $dark-green;
+            }
+        }
+        .info {
+            padding: 1rem;
+            border-bottom: 0.1rem solid $border;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 1rem;
+            grid-template-areas:
+                "figure name"
+                "figure phone";
+            i {
+                grid-area: figure;
+                font-size: 2rem;
+            }
+            h1 {
+                grid-area: name;
+            }
+            h3 {
+                grid-area: phone;
+                font-family: nexa-light;
+            }
+        }
+        .contentList {
+            padding: 1rem;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 0.75rem;
+            li {
+                display: grid;
+                grid-template-areas:
+                    "figure label"
+                    "figure span";
+                grid-template-columns: auto 1fr;
+                grid-gap: 0.5rem 0.75rem;
+                i {
+                    grid-area: figure;
+                    font-size: 1.5rem;
+                }
+                label {
+                    grid-area: label;
+                    font-size: 1.2rem;
+                }
+                span {
+                    grid-area: span;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .content {
+            padding: 1rem;
+            .comment-section,
+            #comment-section {
+                padding-top: 0.75rem;
+                #comment-box {
+                    margin-top: 0.5rem;
+                }
+            }
+            #input-section {
+                padding-top: 0.75rem;
+                input {
+                    width: 100%;
+                }
+            }
+            .link-section {
+                padding-top: 0.75rem;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-row-gap: 0.75rem;
+                grid-template-areas:
+                    "label i"
+                    "a a"
+                    "input input";
+                label {
+                    grid-area: label;
+                }
+                i {
+                    grid-area: i;
+                    font-size: 1.2rem;
+                }
+                a {
+                    grid-area: a;
+                }
+                #inputBox {
+                    grid-area: input;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                        border: none;
+                        border: 0.1rem solid $border;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                    i {
+                        background: $dark-green;
+                        padding: 1rem;
+                        border-top-right-radius: 0.5rem;
+                        color: $white;
+                        border-bottom-right-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+        .radio-buttons {
+            display: grid;
+            grid-gap: 0.5rem;
+            label {
+                font-size: 1.2rem;
+            }
+            padding-top: 0.75rem;
+            grid-template-columns: auto 1fr;
+        }
+        #input-section {
+            padding-top: 0.75rem;
+            input {
+                width: 100%;
+            }
+        }
+        .buttons {
+            padding: 0 1rem 1rem;
+            .btn-bg-light {
+                background: $white;
+                color: $dark-green;
+                margin-bottom: 0.75rem;
+            }
+        }
+        .history {
+            border-top: 0.125rem solid $border;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1rem;
+            .btn-settings {
+                background: $white;
+            }
+        }
+        #open,
+        #calling,
+        #pickedUp,
+        #followUp,
+        #login,
+        #arrange {
+            box-shadow: 0 0 1rem $shadow;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+#history1,
+#history2,
+#history3,
+#history4,
+#history5,
+#history6 {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem $shadow;
+    ul {
+        border-left: 0.1rem solid $border;
+        margin-left: 1.5rem;
+        li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 0.5rem;
+            margin-bottom: 1rem;
+            margin-left: -1.3rem;
+            #tree5 {
+                margin: none;
+            }
+            i {
+                border: 0.1rem solid $border;
+                padding: 0.6rem;
+                border-radius: 50%;
+                color: $border;
+                background: $white;
+            }
+            h6 {
+                margin: auto 0;
+                font-family: nexa-light;
+                color: $grey;
+                .content {
+                    background-color: $darkpink;
+                    border-radius: 0.5rem;
+                    padding: 0 0.5rem;
+                    color: $white;
+                    font-family: nexa-light;
+                }
+                .duration {
+                    color: $border;
+                }
+                .email {
+                    background: $bg-blue;
+                    color: $font-light-blue;
+                }
+            }
+        }
+    }
+}
+.footer-section {
+    .inactive {
+        display: none;
+    }
+    grid-area: footer;
+}
+.inactive-link{
+    display:none
+}
+
+//*************************end of card for mobile
+
+//Card section for tab
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-section {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 1rem;
+        grid-area: heading;
+        padding: 1rem;
+        h4 {
+            color: $dark-green;
+        }
+    }
+    .sectionIncludes{
+        border: 0.125rem solid $border;
+        margin: auto;
+        max-width: 700px;
+    }
+    .lead-section {
+        max-width: 700px;
+        grid-area: lead;
+        border:none;
+        .search-section {
+            padding: 1rem;
+            border-bottom: 0.125rem solid $border;
+            .search-box {
+                display: flex;
+                border: 0.1rem solid $border;
+                i {
+                    padding: 0.5rem;
+                }
+                input {
+                    border: none;
+                    width: 100%;
+                }
+            }
+        }
+        .scroll-section {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            #scroll-left {
+                padding-right: 0.5rem;
+                display: flex;
+                align-self: center;
+            }
+            #scroll-right {
+                padding-left: 0.5rem;
+                display: flex;
+                align-self: center;
+            }
+            #scroll-buttons {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                #static {
+                    button {
+                        border-radius: 0;
+                    }
+                    .inactive-btn {
+                        background: $white;
+                        color: $dark-green;
+                    }
+                    .active-btn {
+                        border: 0.125rem solid $dark-green;
+                    }
+                }
+                #dynamic {
+                    display: flex;
+                    flex-direction: row;
+                    white-space: nowrap;
+                    overflow-x: hidden;
+                    button {
+                        border-radius: 0;
+                        border-left: none !important;
+                    }
+                    .inactive-btn {
+                        background: $white;
+                        color: $dark-green;
+                        border-left: 0;
+                        border: 0.125rem solid $dark-green;
+                    }
+                }
+            }
+        }
+        .card-section {
+            padding: 1rem 1rem 0;
+            .inactive {
+                display: none;
+            }
+            .head {
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                border-bottom: 0.1rem solid $border;
+                h4 {
+                    color: $dark-green;
+                }
+            }
+            .info {
+                padding: 1rem;
+                border-bottom: 0.1rem solid $border;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 1rem;
+                grid-template-areas:
+                    "figure name"
+                    "figure phone";
+                i {
+                    grid-area: figure;
+                    font-size: 2rem;
+                }
+                h1 {
+                    grid-area: name;
+                }
+                h3 {
+                    grid-area: phone;
+                    font-family: nexa-light;
+                }
+            }
+            .contentList {
+                padding: 1rem;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 0.75rem;
+                li {
+                    display: grid;
+                    grid-template-areas:
+                        "figure label"
+                        "figure span";
+                    grid-template-columns: auto 1fr;
+                    grid-gap: 0.5rem 0.75rem;
+                    i {
+                        grid-area: figure;
+                        font-size: 1.5rem;
+                    }
+                    label {
+                        grid-area: label;
+                        font-size: 1.2rem;
+                    }
+                    span {
+                        grid-area: span;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .content {
+                padding: 1rem;
+                .comment-section,
+                #comment-section {
+                    padding-top: 0.75rem;
+                    #comment-box {
+                        margin-top: 0.5rem;
+                    }
+                }
+                #input-section {
+                    padding-top: 0.75rem;
+                    input {
+                        width: 100%;
+                    }
+                }
+                .link-section {
+                    padding-top: 0.75rem;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    grid-row-gap: 0.75rem;
+                    grid-template-areas:
+                        "label i"
+                        "a a"
+                        "input input";
+                    label {
+                        grid-area: label;
+                    }
+                    i {
+                        grid-area: i;
+                        font-size: 1.2rem;
+                    }
+                    a {
+                        grid-area: a;
+                    }
+                    #inputBox {
+                        grid-area: input;
+                        display: flex;
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            border: 0.1rem solid $border;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                        i {
+                            background: $dark-green;
+                            padding: 1rem;
+                            border-top-right-radius: 0.5rem;
+                            color: $white;
+                            border-bottom-right-radius: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .radio-buttons {
+                display: grid;
+                grid-gap: 0.5rem;
+                label {
+                    font-size: 1.2rem;
+                }
+                padding-top: 0.75rem;
+                grid-template-columns: auto 1fr;
+            }
+            #input-section {
+                padding-top: 0.75rem;
+                input {
+                    width: 100%;
+                }
+            }
+            .buttons {
+                padding: 0 1rem 1rem;
+                .btn-bg-light {
+                    background:$white;
+                    color: $dark-green;
+                    margin-bottom: 0.75rem;
+                }
+            }
+            .history {
+                border-top: 0.125rem solid $border;
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 1rem;
+                .btn-settings {
+                    background: $white;
+                }
+            }
+            #open,
+            #calling,
+            #pickedUp,
+            #followUp,
+            #login,
+            #arrange {
+                box-shadow: 0 0 1rem $shadow;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    #history1,
+    #history2,
+    #history3,
+    #history4,
+    #history5,
+    #history6 {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem $shadow;
+        ul {
+            border-left: 0.1rem solid $border;
+            margin-left: 1.5rem;
+            li {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 0.5rem;
+                margin-bottom: 1rem;
+                margin-left: -1.3rem;
+                #tree5 {
+                    margin: none;
+                }
+                i {
+                    border: 0.1rem solid $border;
+                    padding: 0.6rem;
+                    border-radius: 50%;
+                    color: $border;
+                    background: $white;
+                }
+                h6 {
+                    margin: auto 0;
+                    font-family: nexa-light;
+                    color: $grey;
+                    .content {
+                        background-color: $darkpink;
+                        border-radius: 0.5rem;
+                        padding: 0 0.5rem;
+                        color: $white;
+                        font-family: nexa-light;
+                    }
+                    .duration {
+                        color: $border;
+                    }
+                    .email {
+                        background: $bg-blue;
+                        color: $font-light-blue;
+                    }
+                }
+            }
+        }
+    }
+    .footer-section {
+        .inactive {
+            display: none;
+        }
+        grid-area: footer;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+//End of tab view for card
+
 @media screen and (min-width:1024px){
     header{
-        padding: 2rem 1.5rem;
+        padding: 2rem 4rem;
     }
     .flex1{
         display: flex;
@@ -110,5 +740,315 @@ header{
             
         }
     }
+
+    //card section for desktop
+
+    .body {
+        padding: 2rem 4rem;
+        display: grid;
+        grid-template-columns: auto 500px;
+        grid-template-areas:
+            "heading heading"
+            "lead footer";
+    }
+    .header-section {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 1rem;
+        grid-area: heading;
+        padding: 1rem;
+        h4 {
+            color: $dark-green;
+        }
+    }
+    .lead-section {
+        grid-area: lead;
+        max-width: 650px;
+        margin: 0 1rem;
+        border: 0.125rem solid $border;
+        .search-section {
+            padding: 1rem;
+            border-bottom: 0.125rem solid $border;
+            .search-box {
+                display: flex;
+                border: 0.1rem solid $border;
+                i {
+                    padding: 0.5rem;
+                }
+                input {
+                    border: none;
+                    width: 100%;
+                }
+            }
+        }
+        .scroll-section {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            #scroll-left {
+                padding-right: 0.5rem;
+                display: flex;
+                align-self: center;
+            }
+            #scroll-right {
+                padding-left: 0.5rem;
+                display: flex;
+                align-self: center;
+            }
+            #scroll-buttons {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                #static {
+                    button {
+                        border-radius: 0;
+                    }
+                    .inactive-btn {
+                        background: $white;
+                        color: $dark-green;
+                    }
+                    .active-btn {
+                        border: 0.125rem solid $dark-green;
+                    }
+                }
+                #dynamic {
+                    display: flex;
+                    flex-direction: row;
+                    white-space: nowrap;
+                    overflow-x: hidden;
+                    button {
+                        border-radius: 0;
+                        border-left: none !important;
+                    }
+                    .inactive-btn {
+                        background: $white;
+                        color: $dark-green;
+                        border-left: 0;
+                        border: 0.125rem solid $dark-green;
+                    }
+                }
+            }
+        }
+        .card-section {
+            padding: 1rem;
+            .inactive {
+                display: none;
+            }
+            .head {
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                border-bottom: 0.1rem solid $border;
+                h4 {
+                    color: $dark-green;
+                }
+            }
+            .info {
+                padding: 1rem;
+                border-bottom: 0.1rem solid $border;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 1rem;
+                grid-template-areas:
+                    "figure name"
+                    "figure phone";
+                i {
+                    grid-area: figure;
+                    font-size: 2rem;
+                }
+                h1 {
+                    grid-area: name;
+                }
+                h3 {
+                    grid-area: phone;
+                    font-family: nexa-light;
+                }
+            }
+            .contentList {
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 0.75rem;
+                li {
+                    display: grid;
+                    grid-template-areas:
+                        "figure label"
+                        "figure span";
+                    grid-template-columns: auto 1fr;
+                    grid-gap: 0.5rem 0.75rem;
+                    i {
+                        grid-area: figure;
+                        font-size: 1.5rem;
+                    }
+                    label {
+                        grid-area: label;
+                        font-size: 1.2rem;
+                    }
+                    span {
+                        grid-area: span;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .content {
+                padding: 1rem;
+                .comment-section,
+                #comment-section {
+                    padding-top: 0.75rem;
+                    #comment-box {
+                        margin-top: 0.5rem;
+                    }
+                }
+                #input-section {
+                    padding-top: 0.75rem;
+                    input {
+                        width: 100%;
+                    }
+                }
+                .link-section {
+                    padding-top: 0.75rem;
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    grid-row-gap: 0.75rem;
+                    grid-template-areas:
+                        "label i"
+                        "a a"
+                        "input input";
+                    label {
+                        grid-area: label;
+                    }
+                    i {
+                        grid-area: i;
+                        font-size: 1.2rem;
+                    }
+                    a {
+                        grid-area: a;
+                    }
+                    #inputBox {
+                        grid-area: input;
+                        display: flex;
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            border: 0.1rem solid $border;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+                        i {
+                            background: $dark-green;
+                            padding: 1rem;
+                            border-top-right-radius: 0.5rem;
+                            color: $white;
+                            border-bottom-right-radius: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .radio-buttons {
+                display: grid;
+                grid-gap: 0.5rem;
+                label {
+                    font-size: 1.2rem;
+                }
+                padding-top: 0.75rem;
+                grid-template-columns: auto 1fr;
+            }
+            #input-section {
+                padding-top: 0.75rem;
+                input {
+                    width: 100%;
+                }
+            }
+            .buttons {
+                padding: 0 1rem 1rem;
+                .btn-bg-light {
+                    background: $white;
+                    color: $dark-green;
+                    margin-bottom: 0.75rem;
+                }
+            }
+            .history {
+                border-top: 0.125rem solid $border;
+                padding: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 1rem;
+                .btn-settings {
+                    background: $white;
+                }
+            }
+            #open,
+            #calling,
+            #pickedUp,
+            #followUp,
+            #login,
+            #arrange {
+                box-shadow: 0 0 1rem $shadow;
+                border-radius: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    #history1,
+    #history2,
+    #history3,
+    #history4,
+    #history5,
+    #history6 {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem $shadow;
+        ul {
+            border-left: 0.1rem solid $border;
+            margin-left: 1.5rem;
+            li {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-column-gap: 0.5rem;
+                margin-bottom: 1rem;
+                margin-left: -1.3rem;
+                #tree5 {
+                    margin: none;
+                }
+                i {
+                    border: 0.1rem solid $border;
+                    padding: 0.6rem;
+                    border-radius: 50%;
+                    color: $border;
+                    background: $white;
+                }
+                h6 {
+                    margin: auto 0;
+                    font-family: nexa-light;
+                    color: $grey;
+                    .content {
+                        background-color:$darkpink;
+                        border-radius: 0.5rem;
+                        padding: 0 0.5rem;
+                        color: $white;
+                        font-family: nexa-light;
+                    }
+                    .duration {
+                        color: $border;
+                    }
+                    .email {
+                        background: $bg-blue;
+                        color: $font-light-blue;
+                    }
+                }
+            }
+        }
+    }
+    .footer-section {
+        .inactive {
+            display: none;
+        }
+        grid-area: footer;
+    }
 }
+
+
 

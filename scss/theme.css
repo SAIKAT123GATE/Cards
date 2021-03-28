@@ -8,56 +8,347 @@
   src: url("../fonts/Nexa-Light.otf");
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #373d43;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: nexa-bold;
+  color: #1c1c50;
 }
 
-h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
+h1,
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
 }
 
 h4 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
 }
 
 h5 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 
 h6 {
-  font-size: 1.2rem;
-}
-
-select {
-  background: #f2edf3;
-}
-
-section {
-  background-color: #f2edf3;
-  padding: 0rem  1.5rem 0rem 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
 }
 
 p {
-  color: #ffffff;
+  font-family: nexa-light;
   font-size: 1rem;
-  margin-top: 3rem;
-  margin-bottom: 0rem;
+  line-height: 1.2rem;
+  color: #525659;
 }
 
-@media screen and (min-width: 1024px) {
-  section {
+p h1,
+p h2,
+p h3,
+p h4,
+p h5,
+p h6 {
+  font-family: nexa-bold;
+  color: #1c1c50;
+}
+
+p h1,
+p h2 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+p h3 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+p h4 {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+p time {
+  font-family: nexa-light;
+  color: #1c1c50;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+p button {
+  font-family: nexa-light;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #ffffff;
+  padding: 0.8rem 1.25rem;
+  border: 0.125rem solid #06725c;
+  outline: none;
+  background: #06725c;
+}
+
+p button:hover {
+  cursor: pointer;
+}
+
+p button:focus {
+  outline: none;
+  border: none;
+}
+
+p ul li,
+p label {
+  font-family: nexa-light;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #1c1c50;
+}
+
+p span {
+  font-family: nexa-bold;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #1c1c50;
+}
+
+p i {
+  color: #06725c;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+p a {
+  text-decoration: none;
+  color: #1c1c50;
+  font-weight: 700;
+  font-size: 1.15rem;
+  font-family: nexa-light;
+  line-height: 1.3rem;
+}
+
+p input {
+  font-family: nexa-light;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #1c1c50;
+  padding: 0.8rem 0.75rem;
+  border: 0.1rem solid #959595;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #ffffff;
+}
+
+p input::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p input:-ms-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p input::-ms-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p input::placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p input:focus {
+  outline: none;
+}
+
+p textarea {
+  font-family: nexa-light;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #1c1c50;
+  padding: 0.8rem 0.75rem;
+  border: 0.125rem solid #959595;
+  outline: none;
+}
+
+p textarea::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p textarea:-ms-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p textarea::-ms-input-placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p textarea::placeholder {
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  color: #525659;
+}
+
+p textarea:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  p h1,
+  p h2 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  p h3 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  p h4 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  p h5 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  p h6 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p time {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  p button {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p ul li,
+  p label {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p span {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p i {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p a {
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+  }
+  p input {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+  p textarea {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  p section {
     background-color: #f2edf3;
     padding: 1.5rem 1.5rem;
+  }
+  p h1,
+  p h2 {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
+  p h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  p h4 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  p h5 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  p h6 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  p p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p time {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  p button {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p ul li,
+  p label {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p span {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p i {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p a {
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+  }
+  p input {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  p textarea {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
 }
 /*# sourceMappingURL=theme.css.map */

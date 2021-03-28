@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../scss/reset.css" type="text/css" rel="stylesheet">
         
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="../scss/theme.css" type="text/css" rel="stylesheet">
         <link href="../scss/style.css" type="text/css" rel="stylesheet">
+        
         <script src="../script.js"></script>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="../app.js" type="text/javascript"></script>
         <script src="../column.js" type="text/javascript"></script>
+
+        
         
 
     </head>
 
 
     <body>
+
+        <!--Upper nav component-->
+        <div class="upnav"></div>
+        <div class="sidenav"></div>
+            
+        <!--Upper nav complt-->
         <header>
+            
+            
             <div class="flex1">
             <div class="home_and_dash">
                 <i class="fa fa-home"></i>
@@ -45,25 +60,13 @@
             </div>
 
             <div class="btn">
-                <select id="mySelect" onchange="toggle_visibility('togg')">
-                    <option value="Show">Show</option>
-                    <option value="Hide">Hide</option>
+               
                     
-                    
-                </select>
+                <i class="fa fa-angle-up " onclick="myFunction(this); toggle_visibility('togg')" ></i>
+                
             </div>
 
-            <script>
-                function toggle_visibility(id){
-                    var y=document.getElementById(id);
-                    var x=document.getElementById('mySelect').value;
-                    if(x=='Show')
-                        y.style.display='block';
-                    else
-                        y.style.display='none';
-                }
-            </script>
-        
+            
             <div id="togg">
             <div class="grid1">
             <!--First card-->
@@ -75,7 +78,7 @@
                 <h3> $ 15,0000</h3>
                 <p>Increased by 60%</p>
             </div>
-        
+            
 
             <!--second card-->
             <div class="card card2">
@@ -98,21 +101,430 @@
 
             </div>
             <!--white-->
-            <div class="grid2">
-            <div class="card card2 white">
-                <h5 style="color:black">Visit and Sales Statistics</h5>
-                <div id="columnchart_material"></div>
+             <div class="grid2">
+                <div class="card card2 white">
+                    <h5 style="color:black">Visit and Sales Statistics</h5>
+                    <div id="columnchart_material"></div>
 
-            </div>
+                </div>
 
-            <div class="card card2 white">
+                <div class="card card2 white">
                 
-                <div id="donutchart"></div>
+                    <div id="donutchart"></div>
 
+                </div>
+             </div>
             </div>
-            </div>
-        </div>
         
         </header>
+
+        <!--card section-->
+        <div class="body">
+            <section class="header-section">
+                <i class="fa fa-user"></i>
+                <h4>User Leads</h4>
+            </section>
+        
+            <section class="lead-section">
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" name="search" id="search" class="search" placeholder="search">
+                    </div>
+                </div>
+                <div class="scroll-section">
+                    <div id="scroll-left" onclick="shift('left')">
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <div id="scroll-buttons">
+                        <div id="static">
+                            <button id="btn-all" class="inactive-btn" onclick="cardAllDisplay()">All</button>
+                        </div>
+                        <div id="dynamic">
+                            <button id="btn-open" class="active-btn" onclick="cardDisplay('open')">Open</button>
+                            <button id="btn-calling" class="inactive-btn" onclick="cardDisplay('calling')">Calling</button>
+                            <button id="btn-pickedUp" class="inactive-btn" onclick="cardDisplay('pickedUp')">Picked-Up</button>
+                            <button id="btn-followUp" class="inactive-btn" onclick="cardDisplay('followUp')">Follow-Up</button>
+                            <button id="btn-login" class="inactive-btn" onclick="cardDisplay('login')">Login</button>
+                            <button id="btn-arrange" class="inactive-btn" onclick="cardDisplay('arrange')">Arrange a meeting</button>
+                        </div>
+                    </div>
+                    <div id="scroll-right" onclick="shift('right')">
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="card-section">
+                    <div id="open" class="active">
+                        <div class="head">
+                            <h4>Open</h4>
+                            <time id="time1">00:00:00</time>
+                        </div>
+                        <div class="info">
+                            <i class="fa fa-user"></i>
+                            <h1>Utkarsh Shrivastava</h1>
+                            <h3>7209765525</h3>
+                        </div>
+                        <ul class="contentList">
+                            <li>
+                                <i class="fa fa-id-card"></i>
+                                <label for="ref">Ref ID</label>
+                                <span id="ref">#12345</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <label for="mail">Email</label>
+                                <span id="mail">@abc@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i>
+                                <label for="occupation">Occupation</label>
+                                <span id="occupation">#Student</span>
+                            </li>
+                        </ul>
+                        <div class="buttons">
+                            <button class="btn-bg-dark">Call Now</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history1')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="inactive" id="calling">
+                        <div class="head">
+                            <h4>Calling</h4>
+                            <time id="time2">00:00:00</time>
+                        </div>
+                        <div class="content">
+                            <h2>This is the Title</h2>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-bg-light">Picked-Up</button>
+                            <button class="btn-bg-dark">Not Picked-Up</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history2')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="inactive" id="pickedUp">
+                        <div class="head">
+                            <h4>Picked-Up</h4>
+                            <time id="time3">00:00:00</time>
+                        </div>
+                        <div class="content">
+                            <h2>This is the Title</h2>
+                            <div class="comment-section">
+                                <label for="comment-box">Comment</label>
+                                <textarea name="comment" id="comment-box" rows="10" placeholder="Comment here . . ."></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-bg-light">Follow-Up</button>
+                            <button class="btn-bg-dark">Registration</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history3')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+        
+                    <div class="inactive" id="followUp">
+                        <div class="head">
+                            <h4>Follow-Up</h4>
+                            <time id="time4">00:00:00</time>
+                        </div>
+                        <div class="content">
+                            <h2>This is the Title</h2>
+                            <div id="input-section">
+                                <input type="date" name="date" id="date1">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-bg-dark">Submit</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history4')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="inactive" id="login">
+                        <div class="head">
+                            <h4>Login follow-up</h4>
+                            <time id="time5">00:00:00</time>
+                        </div>
+                        <div class="content">
+                            <h2>This is the Title</h2>
+                            <div class="comment-section">
+                                <label for="comment-box">Comment</label>
+                                <textarea name="comment" id="comment-box" rows="10" placeholder="Comment here . . ."></textarea>
+                            </div>
+                            <div id="input-section">
+                                <input type="date" name="date" id="date2">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-bg-light">Follow-Up</button>
+                            <button class="btn-bg-dark">Submit</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history5')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="inactive" id="arrange">
+                        <div class="head">
+                            <h4>Arrange a meeting</h4>
+                            <time id="time6">00:00:00</time>
+                        </div>
+                        <div class="content">
+                            <h2>This is the Title</h2>
+                            <div class="link-section">
+                                <label for="link-address">Link</label>
+                                <i class="fa fa-edit" onclick="inputBox()"></i>
+                                <a href="http://www.konfinity.com/" id="link-address">http://www.konfinity.com/</a>
+                                <div id="inputBox" class="inactive-link">
+                                    <input type="text" name="edited-link" id="edit-link-address">
+                                    <i class="fa fa-check"
+                                        onclick="editLink(document.getElementById('edit-link-address').value)"></i>
+                                </div>
+                            </div>
+        
+                            <div id="input-section">
+                                <input type="date" name="date" id="date3">
+                            </div>
+                            <div class="radio-buttons">
+                                <input type="radio" name="option" id="success" onclick="status('success')">
+                                <label for="success">Success</label>
+                                <input type="radio" name="option" id="failure" onclick="status('failure')">
+                                <label for="failue">Failed</label>
+                            </div>
+                            <div id="comment-section" class="inactive">
+                                <label for="comment-box">Comment</label>
+                                <textarea name="comment" id="comment-box" rows="10" placeholder="Comment here . . ."></textarea>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-bg-dark">Submit</button>
+                        </div>
+                        <div class="history">
+                            <button class="btn-history" onclick="display('history6')">History</button>
+                            <button class="btn-settings">
+                                <i class="fa fa-cog"></i>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="footer-section">
+                <div class="inactive" id="history1">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="inactive" id="history2">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="inactive" id="history3">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="inactive" id="history4">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="inactive" id="history5">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="inactive" id="history6">
+                    <ul class="history-tree">
+                        <li id="tree1">
+                            <i class="fa fa-tags"></i>
+                            <h6><span>Ritesh Raj</span> added <span class="content">Content</span> label <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree2">
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> assigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id='tree3'>
+                            <i class="fa fa-user"></i>
+                            <h6><span>terkhedkarriya09</span> unassigned to <span class="email">@terkhedkarriya09</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree4">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Naman Kumar</span> assigned to <span class="email">@terkhedkarriy</span> <span
+                                    class="duration">2 weeks ago</span></h6>
+                        </li>
+                        <li id="tree5">
+                            <i class="fa fa-user"></i>
+                            <h6><span>Ritesh Raj</span> assigned to <span class="email">@terkhedkarriya09</span> and unassigned
+                                <span class="email">@NamanJaiswal7</span> <span class="duration">2 weeks ago</span>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            </div>
+        
     </body>
 </html>

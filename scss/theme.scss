@@ -4,6 +4,14 @@ $pink:#fe8d95;
 $blue:#3d9dea;
 $green:#3fd2bf;
 $white: #ffffff;
+$dark-green: #06725c;
+$font-blue: #1c1c50;
+$border: #959595;
+$shadow: #dcdcdc;
+$grey: #525659;
+$darkpink:#E31579;
+$bg-blue:#8fcaf1;
+$font-light-blue:#0099ff;
 @font-face{
     font-family: "nexa-bold";
     src:url("../fonts/Nexa-Bold.otf");
@@ -12,46 +20,282 @@ $white: #ffffff;
     font-family: "nexa-light";
     src:url("../fonts/Nexa-Light.otf");
 }
-h1,h2,h3,h4,h5,h6{
-    color: #373d43;
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: nexa-bold;
+    color: $font-blue;
 }
-h1{
-    font-size: 1.8rem;
-    font-weight: 700;
+h1,
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
 }
-h2{
-    font-size: 1.6rem;
-}
-h3{
-    font-size: 1.8rem;
-}
-h4{
-    font-size: 1.6rem;
-}
-h5{
+h3 {
     font-size: 1.4rem;
+    line-height: 1.6rem;
 }
-h6{
+h4 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+h5 {
     font-size: 1.2rem;
+    line-height: 1.4rem;
 }
-select{
-    background: $lightpink;
+h6 {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
 }
-section{
-    background-color: $lightpink;
-    padding: 0rem  1.5rem 0rem 1.5rem;
-}
-p{
-    color: $white;
+p {
+    font-family: nexa-light;
     font-size: 1rem;
-    margin-top:3rem;
-    margin-bottom: 0rem;
+    line-height: 1.2rem;
+    color: $grey;h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: nexa-bold;
+        color: $font-blue;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+    h4 {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+time {
+    font-family: nexa-light;
+    color: $font-blue;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
 }
-@media screen and (min-width:1024px)
-{
+button {
+    font-family: nexa-light;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $white;
+    padding: 0.8rem 1.25rem;
+    border: 0.125rem solid $dark-green;
+    outline: none;
+    background: $dark-green;
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+ul li,
+label {
+    font-family: nexa-light;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $font-blue;
+}
+span {
+    font-family: nexa-bold;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $font-blue;
+}
+i {
+    color: $dark-green;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    display: flex;
+    align-self: center;
+}
+a {
+    text-decoration: none;
+    color: $font-blue;
+    font-weight: 700;
+    font-size: 1.15rem;
+    font-family: nexa-light;
+    line-height: 1.3rem;
+}
+input {
+    font-family: nexa-light;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $font-blue;
+    padding: 0.8rem 0.75rem;
+    border: 0.1rem solid $border;
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: $white;
+    &::placeholder {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        color: $grey;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+textarea {
+    font-family: nexa-light;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $font-blue;
+    padding: 0.8rem 0.75rem;
+    border: 0.125rem solid $border;
+    outline: none;
+    &::placeholder {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+        color: $grey;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    h1,
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
+    h4 {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+    h5 {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+    }
+    h6 {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    p {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    time {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+    button {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    ul li,
+    label {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    span {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    i {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    a {
+        font-size: 1.25rem;
+        line-height: 1.4rem;
+    }
+    input {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    textarea {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     section{
         background-color: $lightpink;
         padding: 1.5rem 1.5rem;
     }
+  h1,
+  h2 {
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+  h5 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  h6 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  time {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+  }
+  button {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  ul li,
+  label {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  span {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  i {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  a {
+      font-size: 1.35rem;
+      line-height: 1.5rem;
+  }
+  input {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+  textarea {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+}
 }
