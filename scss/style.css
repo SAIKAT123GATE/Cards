@@ -1,11 +1,11 @@
 @font-face {
   font-family: "nexa-bold";
-  src: url("../fonts/Nexa-Bold.otf");
+  src: url("../asset/Nexa-Bold.otf");
 }
 
 @font-face {
   font-family: "nexa-light";
-  src: url("../fonts/Nexa-Light.otf");
+  src: url("../asset/Nexa-Light.otf");
 }
 
 * {
@@ -398,17 +398,20 @@ body {
 }
 
 .home_and_dash div h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
-.selecttag {
-  margin-top: 1rem;
+.home_and_dash div h2 {
+  font-size: 1.2rem;
 }
 
 .selecttag select {
-  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
+  border-style: 1px solid black;
   border-radius: 0.5rem;
 }
 
@@ -457,9 +460,20 @@ header {
   color: #ffffff;
 }
 
+.card h5 {
+  font-size: 1.5rem;
+}
+
 .card h3 {
   color: #ffffff;
   margin-top: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.card p {
+  color: #ffffff;
+  margin-top: 3rem;
+  font-family: nexa-bold;
 }
 
 .card2 {
@@ -1372,7 +1386,7 @@ header {
     margin-left: 5rem;
   }
   .body {
-    padding: 2rem 1rem 2rem 0rem;
+    padding: 0rem 1rem 2rem 0rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 500px;
